@@ -6,7 +6,7 @@ body{
 }
 .header{
     width: 1000px;
-
+    margin-left: 221px;
 }
 .header__title>h1{
         font-size: 60px;
@@ -24,7 +24,7 @@ body{
     color: #ffffff;
     margin: 0px;
 }
-.header__content>button{
+.header__crtBtn{
     width: 287px;
     height: 40px;
     background: #F5D57F;
@@ -33,9 +33,6 @@ body{
     margin-top: 79px;
     margin-right: 0px;
 }
-.header__title{
-    margin-left: 221px;
-}
 .header__content{
     display: flex;
     flex-direction: row;
@@ -43,10 +40,12 @@ body{
 }
 .main {
     width: 1000px;
-    margin-left: 221px;
+    margin-left: 202px;
     margin-top: 86px;
+    margin-bottom: 100px;
+    
 }
-.main>h2 {
+.main__title {
     display: inline;
     font-weight: 900;
     font-size: 22px;
@@ -54,13 +53,23 @@ body{
     text-transform: uppercase;
     color: #ffffff;
     width: 300px;
-    margin: 0px;
+    margin-left: 19px;
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 700px;
+}
+.active{
+    text-decoration: line-through;
 }
 .modal_bkg{
         top: 0px;
         display: none;
         position: absolute;
-        width: 1440px;
+        width: 100%;
         height: 1000px;
         background: rgba(17, 17, 17, 0.5);
     }
@@ -78,10 +87,10 @@ body{
         border-radius: 4px;
         padding-left: 20px;
     }
-    .modal__text, .modal__title, .close_btn, .save_btn, #modal_text, .modal>p{
+    .modal__title, .close_btn, .save_btn, #modal_text, .modal>p{
         width: 459px;
     }
-    .modal>p{
+    .modal__task_title{
         font-size: 20px;
         line-height: 27px;
         margin-bottom: 14px;
@@ -99,9 +108,17 @@ body{
         border: 1px solid #5F81B2;
         box-sizing: border-box;
         border-radius: 4px;
-        margin-bottom: 17px;
+        margin-bottom: 0px;
         height: 40px;
         padding-left: 15px;
+    }
+    .modal__error{
+        display: none;
+        margin-bottom: 0px;
+        margin-left: 5px;
+        margin-top: 0px;
+        color: red;
+        font-size: 12px;
     }
     #modal_text{
         background: #FFFFFF;
@@ -112,6 +129,7 @@ body{
         margin-bottom: 19px;
         height: 100px;
         padding-left: 15px;
+        margin-top: 17px;
     }
     .save_btn{
         font-size: 16px;
@@ -133,4 +151,97 @@ body{
         background: #AEAEAE;
         border: none;
         height: 40px;
+    }
+    .modal_delete_bkg{
+        top: 0px;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 1000px;
+        background: rgba(17, 17, 17, 0.5);
+    }
+    .modal_delete{
+        background: #FFFBE3;
+        border-radius: 4px;
+        width: 328px;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding-left: 20px;
+    }
+    .modal_delete>p{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .modal_delete__close{
+        position: absolute;
+        left: 89%;
+        right: 20.83%;
+        top: 12%;
+        bottom: 20.83%;;
+    }
+    .delete_btn{
+        width: 287px;
+        height: 40px;
+        background: #AC4141;
+        border-radius: 4px;
+        color: #FFFFFF;
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .cancel_btn{
+        width: 287px;
+        height: 40px;
+        background: #AEAEAE;
+        border-radius: 4px;
+        color: #FFFFFF;
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .main__tasks{
+        background:#FFFBE3;
+        border-radius: 4px;
+        padding-left: 20px;
+        padding-top: 16px;
+        position: relative;
+        width: 490px;
+        margin-top: 36px;
+        padding-bottom: 51px;
+        margin-left: 19px;
+    }
+    .title{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 7px;
+        width: 417px;
+    }
+    .text{
+        font-size: 16px;
+        line-height: 22px;
+        width: 417px;
+        margin-bottom: 51px;
+    }
+    .main__checkbox{
+        position: absolute;
+        right: 18px;
+        top: 25px;
+        width: 22px;
+        height: 22px;
+    }
+    .main__bin{
+        position: absolute;
+        left: 92.5%;
+        right: 20.83%;
+        top: 85%;
+        bottom: 12.5%;
     }

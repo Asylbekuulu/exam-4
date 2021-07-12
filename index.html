@@ -17,20 +17,34 @@
                 <h1>TodoList</h1>
                 <p>by name surname</p>
             </div>
-            <button>Создать новую задачу</button>
+            <button class="header__crtBtn">Создать новую задачу</button>
         </div>
     </header>
     <section class="main">
-        <h2>Список ЗАДАЧ</h2>
+        <h2 class="main__title">Список ЗАДАЧ</h2>
         <div class="main__content">
-            
+            <div class="main__tasks">
+                <h3 class="title">Заголовок задачи</h3>
+                <p class="text">Более длинное описание задачи на несолько строчек, может быть даже на 4. Более длинное описание задачи на несолько строчек, может быть даже на 4</p>
+                <input type="checkbox" class="main__checkbox">
+                <img src="./Vector-bin.png" alt="delete btn" class="main__bin">
+            </div>
         </div>
     </section>
+    <div class="modal_delete_bkg">
+        <div class="modal_delete">
+            <p>Вы уверены что хотите </br>удалить задачу навсегда?</p>
+            <img src="./Vector.png" alt="close button" class="modal_delete__close">
+            <button class="delete_btn">Удалить</button>
+            <button class="cancel_btn">Отмена</button>
+        </div>
+    </div>
     <div class="modal_bkg">
         <div class="modal">
-            <p>Создать задачу</p>
+            <p class="modal__task_title">Создать задачу</p>
             <img src="./Vector.png" alt="close button" class="x_close">
             <input type="text" class="modal__title" placeholder="Загаловок задачи">
+            <p class="modal__error">Заполните заголовок</p>
             <textarea name="" placeholder="Описание" id="modal_text" cols="30" rows="10"></textarea>
             <button class="save_btn">Сохранить</button>
             <button class="close_btn">Отмена</button>
