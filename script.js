@@ -30,11 +30,6 @@ window.addEventListener('click', function(event){
         closeModal()
     }
 })
-// window.onclick = function(event){
-//     if(event.target == modalBackground){
-//         closeModal();
-//     }
-// }
 
 
 const createElement = (tag, className, innerTxt) => {
