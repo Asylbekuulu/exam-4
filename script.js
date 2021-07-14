@@ -25,11 +25,16 @@ function closeModal() {
 createBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
 closeXBtn.onclick = closeModal;
-window.onclick = function(){
+window.addEventListener('click', function(event){
     if(event.target == modalBackground){
         closeModal()
     }
-}
+})
+// window.onclick = function(event){
+//     if(event.target == modalBackground){
+//         closeModal();
+//     }
+// }
 
 
 const createElement = (tag, className, innerTxt) => {
@@ -73,10 +78,13 @@ const prependElement = () => {
         modalDltBackground.style.display = 'none'
     }
     deleteBtn.addEventListener('click', function(){
-        task.remove();
-        dltModalClose();
+            task.remove();
+            dltModalClose;
+        
     })
     cancelBtn.addEventListener('click', dltModalClose);
+    
+    
     window.onclick = function(){
         if(event.target == modalDltBackground){
             modalDltBackground.style.display = 'none'
@@ -109,7 +117,7 @@ saveBtn.addEventListener('click', function() {
     })
 
     const deleteTask = document.querySelector('.main__bin');
-    deleteTask.addEventListener('click', function(){
+    deleteTask.addEventListener('click',function(){
         modalDltBackground.style.display = 'block'
     })
     const dltModalClose = () => {
